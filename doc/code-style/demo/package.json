@@ -1,0 +1,27 @@
+{
+  "name": "code-style-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier-standard \"src/**/*+(js|css|vue|html)\"",
+    "format:commit": "prettier-standard --changed \"src/**/*+(js|css|vue|html)\"",
+    "format:check": "prettier-standard --check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*+(js|css|vue|html)": "npm run format:check"
+  },
+  "author": "Joel",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^4.0.10",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "prettier-standard": "^16.1.0"
+  }
+}
