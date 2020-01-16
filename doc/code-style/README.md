@@ -1,16 +1,17 @@
-# 代码格式
-代码格式遵循 [JavaScript Standard Style](https://github.com/sheerun/prettier-standard)。
+# 代码格式化
+代码格式遵循 [JavaScript Standard Style](https://github.com/sheerun/prettier-standard)。 使用的原因：
+
+* 无须配置。 史上最便捷的统一代码风格的方式，轻松拥有。
+* 自动代码格式化。 只需运行 standard --fix 从此和脏乱差的代码说再见。
+* 提前发现风格及程序问题。 减少代码审查过程中反反复复的修改过程，节约时间。
 
 具体规则见 [这里](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md#javascript-standard-style)。
 
 ## 应用
 * 实现：格式化代码。用 [Prettier](https://github.com/prettier/prettier)。
 * 实现：将代码格式成符合 JavaScript Standard Style。 用 [Prettier-standard](https://github.com/sheerun/prettier-standard)。
-* 配置一些自定义格式化选项。添加 `.prettierrc`， 如 `"eqeqeq": "off"`。
+* 配置一些自定义格式化选项。添加 `.prettierrc`， 如 `"eqeqeq": "off"`。 所有支持的规则见 [这里](https://prettier.io/docs/en/options.html)。
 * git 提交前验证代码格式。[husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged)。
 
-具体见： [demo](demo)。 该 demo 中：
-* `npm run format`: 格式化所有 `src` 下的 js, css, vue, html 文件。
-* `npm run format:commit`: 格式化所有改动的 `src` 下的 js, css, vue, html 文件。
-* `npm run format:check`: 检查所有 `src` 下所有的 js, css, vue, html 文件的格式。
+具体见： [demo](demo)。
 
