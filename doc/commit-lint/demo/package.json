@@ -1,0 +1,21 @@
+{
+  "name": "commit-lint",
+  "version": "1.0.0",
+  "description": "提交信息的格式为： 提交类型: 任务id或备注。如：fix: 1432。注意：不要忘写列冒号和空格。",
+  "main": "index.js",
+  "scripts": {
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": "Joel",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.0.10"
+  }
+}
