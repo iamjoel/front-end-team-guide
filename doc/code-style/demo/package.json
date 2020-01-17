@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint \"src/**/*.js\"",
     "format": "prettier-standard \"src/**/*+(js|css|vue|html)\"",
     "format:commit": "prettier-standard --changed \"src/**/*+(js|css|vue|html)\"",
     "format:check": "prettier-standard --check"
@@ -13,12 +14,19 @@
       "pre-commit": "lint-staged"
     }
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
+  },
   "lint-staged": {
-    "src/**/*+(js|css|vue|html)": "npm run format:check"
+    "src/**/*+(js|css|vue|html)": "npm run format:check",
+    "src/**/+js": "eslint"
   },
   "author": "Joel",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^6.8.0",
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",

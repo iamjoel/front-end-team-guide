@@ -11,7 +11,7 @@ npm run format
 npm run format:commit
 ```
 
-### 格式化检查
+### 格式检查
 检查所有 `src` 下所有的 js, css, vue, html 文件的格式。
 ```
 npm run format:check
