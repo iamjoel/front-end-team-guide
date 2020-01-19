@@ -23,7 +23,7 @@ npm run build
 ```
 
 ## 维护者
-[@Joel](https://github.com/iamjoel)...
+[@Joel](https://github.com/iamjoel)
 
 ## 做贡献
 
