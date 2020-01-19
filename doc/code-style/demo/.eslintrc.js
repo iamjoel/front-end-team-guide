@@ -28,7 +28,7 @@ module.exports = {
     "no-useless-concat": "warn", // 禁止不必要的字符串字面量或模板字面量的连接,
     "no-eval": "error", // 禁用 eval()
     "no-unused-vars": "warn", // 禁止出现未使用过的变量
-    "no-use-before-define": "error", // 禁止在变量定义之前使用它们
+    "no-use-before-define": ["error", {"functions": false}], // 禁止在变量定义之前使用它们
     "complexity": ["error", { "max": 10 }], // 程序中允许的最大环路复杂度
     "consistent-return": "error", // 要求 return 语句要么总是指定返回的值，要么不指定
     "max-depth": ["error", 5], // 强制块语句的最大可嵌套深度
@@ -39,7 +39,6 @@ module.exports = {
     // es6
     "no-var": "warn", // 要求使用 let 或 const 而不是 var
     "no-duplicate-imports": "warn", // 禁止重复模块导入
-    "prefer-const": "warn", // 要求使用 const 声明那些声明后不再被修改的变量
     "prefer-destructuring": "warn", // 优先使用数组和对象解构
     "prefer-template": "warn" // 要求使用模板字面量而非字符串连接
   }

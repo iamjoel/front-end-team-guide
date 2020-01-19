@@ -1,7 +1,10 @@
 const VERSION = '1.0.0'
-const A_B = 3 // 常量，这种也算驼峰的
+console.log(VERSION)
 
-let weather = () => {
+const A_B = 3 // 常量，这种也算驼峰的
+console.log(A_B)
+
+const weather = () => {
   let randomNum = Math.random()
   // 行很长的情况
   let res =
@@ -14,6 +17,7 @@ let weather = () => {
       : 'stormy'
   return res
 }
+weather()
 
 sum(1, 2)
 
