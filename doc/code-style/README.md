@@ -1,9 +1,9 @@
-# 代码格式
+# 代码风格
 ## 格式
-代码格式遵循：
+代码风格遵循：
 
 1. [JavaScript Standard Style](https://github.com/sheerun/prettier-standard)。 
-1. 额外的验证。规则见[这里](more-rule.md)。
+1. 额外的代码风格的验证。规则见[这里](more-rule.md)。
 
 
 使用 JavaScript Standard Style 使用的原因：
@@ -18,7 +18,7 @@
 * 实现：格式化代码。用 [Prettier](https://github.com/prettier/prettier)。
 * 实现：将代码格式成符合 JavaScript Standard Style。 用 [Prettier-standard](https://github.com/sheerun/prettier-standard)。
 * 实现：配置一些自定义格式化选项。添加 `.prettierrc`， 如 `"eqeqeq": "off"`。 所有支持的规则见 [这里](https://prettier.io/docs/en/options.html)。
-* 实现：额外的验证。 用 [ESLint](http://eslint.cn/)
+* 实现：额外的验证。 用 [ESLint](http://eslint.cn/) 及相关插件。
 * git 提交前验证代码格式。[husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged)。
 
 具体见： [demo](demo)。

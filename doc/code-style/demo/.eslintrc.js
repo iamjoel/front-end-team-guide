@@ -1,8 +1,15 @@
 module.exports = {
+  // 配置参数： http://eslint.cn/docs/user-guide/configuring#specifying-parser-options
+  "root": true, // 停止在父级目录中寻找 eslint 配置文件。
+  "parser": "vue-eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 6
+    "parser": "babel-eslint",
+    "ecmaVersion": 6,
+    "sourceType": "module" // 是 ECMAScript 模块
   },
-  // http://eslint.cn/docs/rules/
+  "extends": "plugin:vue/base",
+  "plugins": ['vue'],
+  // 验证规则： http://eslint.cn/docs/rules/
   "rules": {
     // 代码风格
     "camelcase": "error", // 驼峰

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint \"src/**/*.js\"",
+    "lint": "eslint src --ext .vue,.js",
     "format": "prettier-standard \"src/**/*+(js|css|vue|html)\"",
     "format:commit": "prettier-standard --changed \"src/**/*+(js|css|vue|html)\"",
     "format:check": "prettier-standard --check"
@@ -21,12 +21,14 @@
   },
   "lint-staged": {
     "src/**/*+(js|css|vue|html)": "npm run format:check",
-    "src/**/+js": "eslint"
+    "src/**/*": "npm run lint"
   },
   "author": "Joel",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.1.2",
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
