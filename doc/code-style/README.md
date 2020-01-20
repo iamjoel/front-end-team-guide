@@ -1,5 +1,9 @@
 # 代码风格
-## 格式
+目标：代码保持统一的风格，同时做这事不能花费成员过多的时间。
+
+实现：用格式化代码工具来统一空格，缩进。验证尽可能少的必要的规则。
+
+## 代码风格
 代码风格遵循：
 
 1. [JavaScript Standard Style](https://github.com/sheerun/prettier-standard)。 
@@ -20,7 +24,7 @@
 * 实现：配置一些自定义格式化选项。添加 `.prettierrc`， 如 `"eqeqeq": "off"`。 所有支持的规则见 [这里](https://prettier.io/docs/en/options.html)。
 * 实现：额外的验证。 用 [ESLint](http://eslint.cn/) 及相关插件。
 * 实现：文件名的验证。 直接写的个验证脚本，见[这里](demo/scripts/lint-file-name.js)。
-* git 提交前验证代码格式。[husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged)。
+* 实现：git 提交前验证代码格式。[husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged)。
 
 具体见： [demo](demo)。
 
