@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src --ext .vue,.js",
+    "lint:file-name": "node scripts/lint-file-name",
     "format": "prettier-standard \"src/**/*+(js|css|vue|html)\"",
     "format:commit": "prettier-standard --changed \"src/**/*+(js|css|vue|html)\"",
     "format:check": "prettier-standard --check"
@@ -21,7 +22,10 @@
   },
   "lint-staged": {
     "src/**/*+(js|css|vue|html)": "npm run format:check",
-    "src/**/*": "npm run lint"
+    "src/**/*": [
+      "npm run lint:file-name",
+      "npm run lint"
+    ]
   },
   "author": "Joel",
   "license": "MIT",
@@ -31,6 +35,7 @@
     "eslint-plugin-vue": "^6.1.2",
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
+    "ora": "^4.0.3",
     "prettier": "^1.19.1",
     "prettier-standard": "^16.1.0"
   }
