@@ -19,7 +19,7 @@
 * 实现：将代码格式成符合 JavaScript Standard Style。 用 [Prettier-standard](https://github.com/sheerun/prettier-standard)。
 * 实现：配置一些自定义格式化选项。添加 `.prettierrc`， 如 `"eqeqeq": "off"`。 所有支持的规则见 [这里](https://prettier.io/docs/en/options.html)。
 * 实现：额外的验证。 用 [ESLint](http://eslint.cn/) 及相关插件。
-* 实现：文件名的验证。 直接写的个验证脚本，见[这里](scripts/lint-file-name.js)。
+* 实现：文件名的验证。 直接写的个验证脚本，见[这里](demo/scripts/lint-file-name.js)。
 * git 提交前验证代码格式。[husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged)。
 
 具体见： [demo](demo)。
