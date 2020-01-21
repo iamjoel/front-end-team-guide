@@ -3,16 +3,15 @@ import 'ant-design-vue/dist/antd.css'
 import doc from './README.md'
 
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
+import { action, actions } from '@storybook/addon-actions'
 
 export default {
-  title: '按钮',
+  title: '基础/按钮',
   decorators: [withKnobs],
   component: AntButton,
   parameters: {
     componentSubtitle: '代码片段快捷键： ant-btn-(type:[primary|danger|default|link)',
     notes: doc,
-
   },
 }
 
@@ -30,6 +29,7 @@ export const Type = () => ({
     },
     methods: {
       handleClick() {
+        debugger
         action('clicked')
       }
     },
@@ -49,6 +49,10 @@ export const Type = () => ({
       </div>
     `
 })
+
+Type.story = {
+  name: '类型',
+}
 
 
 export const Disabled = () => ({
@@ -74,4 +78,8 @@ export const Disabled = () => ({
         </ant-button>
       </div>
     `
-});
+})
+
+Disabled.story = {
+  name: '禁用'
+}

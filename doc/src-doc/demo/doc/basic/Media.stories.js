@@ -1,7 +1,7 @@
 import Media from '../../src/media/Index'
 
 export default {
-  title: 'Media'
+  title: '基础/Media'
 }
 
 export const Basic = () => ({
