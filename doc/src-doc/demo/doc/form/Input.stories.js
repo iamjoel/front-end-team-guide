@@ -23,7 +23,7 @@ export const Disable = () => ({
   components: { AntInput },
   props: {
     isDisabled: {
-      default: boolean('是否禁用', false),
+      default: boolean('是否禁用', true),
     }
   },
   template: `

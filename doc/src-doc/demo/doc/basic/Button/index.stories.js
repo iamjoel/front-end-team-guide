@@ -29,8 +29,9 @@ export const Type = () => ({
     },
     methods: {
       handleClick() {
-        debugger
+        // action 没有在显示。。。
         action('clicked')
+        actions('a', 'b')
       }
     },
     template: `
