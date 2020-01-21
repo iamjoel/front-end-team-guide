@@ -5,5 +5,5 @@
   * 组件文档 [模板](template/doc/component.md)
   * JavaScript 文档
 * 常用链接
-* [CHANGELOG.md](template/CHANGELOG.md)
-* LICENSE
+* CHANGELOG.md [模板](template/CHANGELOG.md)
+* LICENSE [MIT LICENSE模板](template/license/MIT.md)
