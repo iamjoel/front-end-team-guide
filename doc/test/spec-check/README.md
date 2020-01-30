@@ -26,4 +26,6 @@
 * 用 [Power Assert](https://github.com/power-assert-js/power-assert) 断言库。 原因：1 API 简单，2 报错信息特别详细。
 * 用 [Vue Test Utils](https://vue-test-utils.vuejs.org/zh/) 来测试 Vue 组件。
 
+推荐用 [Majestic](https://github.com/Raathigesh/majestic) 来运行 Jest。 Majestic 是运行 Jest 的 GUI 工具，支持只运行一个测试用例文件。
+
 Demo 见 [这里](demo)。
