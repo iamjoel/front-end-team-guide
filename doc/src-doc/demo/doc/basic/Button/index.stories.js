@@ -4,6 +4,8 @@ import doc from './README.md'
 
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs'
 import { action, actions } from '@storybook/addon-actions'
+import { specs, describe, it } from 'storybook-addon-specifications'
+import expect from 'expect'
 
 export default {
   title: '基础/按钮',
@@ -15,41 +17,53 @@ export default {
   },
 }
 
-export const Type = () => ({
-    components: { AntButton },
-    props: {
-      type: {
-        default: select('类型', {
-          '主要': 'primary',
-          '危险': 'danger',
-          '默认': 'default',
-          '幽灵': 'link'
-        }, 'default'),
-      }
-    },
-    methods: {
-      handleClick() {
-        // action 没有在显示。。。
-        action('clicked')
-        actions('a', 'b')
-      }
-    },
-    template: `
-      <div>
-        <ant-button 
-          @click="handleClick"
-          :type="type">
-          类型切换
-        </ant-button>
-        <ant-button 
-          v-for="(item, i) in ['primary', 'danger', 'link']" :key="item"
-          :type="item"
-        >
-          {{item}}
-        </ant-button>
-      </div>
-    `
-})
+export const Type = () => {
+  specs(() => describe('类型', function () {
+    it('should support expect', function () {
+      expect('a').toBe('a');
+      expect('a1').toBe('a1');
+    })
+    it('should support expect2', function () {
+      expect('a').toBe('a');
+      expect('a1').toBe('a1');
+    })
+  }))
+  return {
+      components: { AntButton },
+      props: {
+        type: {
+          default: select('类型', {
+            '主要': 'primary',
+            '危险': 'danger',
+            '默认': 'default',
+            '幽灵': 'link'
+          }, 'default'),
+        }
+      },
+      methods: {
+        handleClick() {
+          // action 没有在显示。。。
+          action('clicked')
+          actions('a', 'b')
+        }
+      },
+      template: `
+        <div>
+          <ant-button 
+            @click="handleClick"
+            :type="type">
+            类型切换
+          </ant-button>
+          <ant-button 
+            v-for="(item, i) in ['primary', 'danger', 'link']" :key="item"
+            :type="item"
+          >
+            {{item}}
+          </ant-button>
+        </div>
+      `
+  }
+}
 
 Type.story = {
   name: '类型',

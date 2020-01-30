@@ -8,6 +8,7 @@ module.exports = {
     '@storybook/addon-storysource', // 示例与源码的对应
     '@storybook/addon-cssresources/register', // CSS 源码
     '@storybook/addon-viewport/register', // 模拟各种设备
-    '@storybook/addon-backgrounds/register' // 改背景色
+    '@storybook/addon-backgrounds/register', // 改背景色
+    'storybook-addon-specifications/register'
   ]
 }
