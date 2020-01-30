@@ -23,6 +23,7 @@
 ## 应用
 这边以测试 Vue 为例：
 * 用 [Jest](https://jestjs.io/docs/zh-Hans/getting-started) 来做测试框架。
+* 用 [Power Assert](https://github.com/power-assert-js/power-assert) 断言库。 原因：1 API 简单，2 报错信息特别详细。
 * 用 [Vue Test Utils](https://vue-test-utils.vuejs.org/zh/) 来测试 Vue 组件。
 
 Demo 见 [这里](demo)。
