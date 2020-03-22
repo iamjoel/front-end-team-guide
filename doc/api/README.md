@@ -4,12 +4,12 @@
 下面是我们团队的接口规范。
 
 ## 协议
-为确保数据交互安全，正式地址用HTTPS。
+为确保数据交互安全，正式地址用HTTPS协议。
 
 ## 接口url
-* 路径以 `api` 开始。如 `https:xxx.com/api/student/list`
-* 使用小写字母。
-* 单词分隔用`-`。
+* 路径以 `api` 开始。如 `/api/student/list`
+* 路径中的英文字母使用小写字母。
+* 路径中的单词分隔用`-`。
 
 ## 请求方法
 * 不改变数据的接口用 GET。如: 获取列表接口，详情接口。
@@ -20,7 +20,7 @@
 ## 请求参数
 * POST 的数据都会放在body里。用 `x-www-form-urlencoded` 格式。
 * token 放请求头中的 Authorization 字段。Authorization值的格式: `Bearer token值`。
-* 接口版本请求头中的 Version 字段。
+* 接口版本 放请求头中的 Version 字段。
 
 ## 响应
 返回`json`类型数据。如
@@ -36,6 +36,7 @@
 * errorCode: 错误码。没有报错，errorCode 为 0。
 * errorMsg: 错误信息。没有报错，不返回 errorMsg 字段。
 * data: 主体内容。对于列表接口，data 是数组类型的。
+* 响应字段用驼峰命名法。
 
 ## 列表接口
 ### url
@@ -48,10 +49,10 @@ GET。
 #### 筛选条件
 筛选条件: where。where 的值是 `encodeURIComponent(JSON.stringify({列名1: 值, 列名2: 值, ...}))`。如: 筛选年龄(age)为20的学生，url 是 `/api/student/list?where=%7B%22age%22%3A20%7D`。
 
-列的筛选的规则：
+**列的筛选规则：**
 * 精确搜索: `列名`。
 * 模糊搜索: `列名__like`。
-* 大于: `列名__gt`。 常见对数字类型和日期类型的列筛选。
+* 大于: `列名__gt`。 用于数字和日期的列。
 * 大于等于: `列名__gte`。
 * 小于: `列名__lt`。
 * 小于等于: `列名__lte`。
